@@ -6,7 +6,7 @@ Puppet::Type.type(:rabbitmq_exchange).provide(:rabbitmqadmin) do
   else
     has_command(:rabbitmqadmin, 'rabbitmqadmin') do
       environment :HOME => "/tmp"
-      environment :PATH => "/usr/local/bin"
+      environment :PATH => "/usr/local/bin:/usr/bin"
     end
   end
   defaultfor :feature => :posix
