@@ -37,7 +37,7 @@ class rabbitmq::params {
   $service_name             = 'rabbitmq-server'
   #config
   $cluster_disk_nodes       = []
-  $cluster_node_type        = 'disk'
+  $cluster_node_type        = 'disc'
   $cluster_nodes            = []
   $config                   = 'rabbitmq/rabbitmq.config.erb'
   $config_cluster           = false
