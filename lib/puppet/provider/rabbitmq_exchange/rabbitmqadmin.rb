@@ -1,4 +1,3 @@
-require 'puppet'
 Puppet::Type.type(:rabbitmq_exchange).provide(:rabbitmqadmin) do
 
   if Puppet::PUPPETVERSION.to_f < 3

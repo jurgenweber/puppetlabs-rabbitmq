@@ -1,4 +1,3 @@
-require 'puppet'
 Puppet::Type.type(:rabbitmq_user).provide(:rabbitmqctl) do
 
   if Puppet::PUPPETVERSION.to_f < 3
