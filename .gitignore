@@ -5,3 +5,4 @@ spec/fixtures
 .idea
 **.DS_Store
 *.lock
+.svn
