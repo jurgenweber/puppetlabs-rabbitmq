@@ -1,6 +1,8 @@
 % This file managed by Puppet
 % Template Path: <%= @module_name %>/templates/rabbitmq.config
 [
+% Configure the management listening port
+{rabbitmq_management, [{listener, [{port, <%= @management_port %>}] }] },
 <% if @config_cluster -%>
 {rabbit, [{cluster_nodes, {[<%= @_cluster_nodes.map { |n| "\'rabbit@#{n}\'" }.join(', ') %>], <%= @cluster_node_type %>}}]}<% if @config_stomp -%>,<% end %>
 <% end -%>
