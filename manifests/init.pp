@@ -42,7 +42,6 @@ class rabbitmq(
   validate_string($package_name)
   validate_string($package_provider)
   validate_string($package_source)
-  validate_re($version, '^\d+\.\d+\.\d+(-\d+)*$') # Allow 3 digits and optional -n postfix.
   # Validate config parameters.
   validate_array($cluster_disk_nodes)
   validate_re($cluster_node_type, '^(disc|ram)$')
