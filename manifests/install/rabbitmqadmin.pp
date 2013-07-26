@@ -13,8 +13,6 @@ class rabbitmq::install::rabbitmqadmin {
     ],
   }
 
-  package { 'curl': ensure => present }
-
   file { '/usr/local/bin/rabbitmqadmin':
     owner   => 'root',
     group   => 'root',
