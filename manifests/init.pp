@@ -78,14 +78,14 @@ class rabbitmq(
   include '::rabbitmq::service'
   include '::rabbitmq::management'
 
-  #case $::osfamily {
-  #  'RedHat':
-  #    { include '::rabbitmq::repo::rhel' }
-  #  'Debian':
-  #    { include '::rabbitmq::repo::apt' }
-  #  default:
-  #    { }
-  #}
+  case $::osfamily {
+    'RedHat':
+      { include '::rabbitmq::repo::rhel' }
+    'Debian':
+      { include '::rabbitmq::repo::apt' }
+    default:
+      { }
+  }
 
   if $admin_enable {
     include '::rabbitmq::install::rabbitmqadmin'
